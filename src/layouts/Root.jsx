@@ -1,9 +1,16 @@
+import { Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 
 const Root = () => {
   return (
     <div>
-      <h3 className="text-4xl">hff fgfgf ngjhjhk</h3>
+      <Navbar></Navbar>
+      <div className="min-h-screen">
+      <Outlet></Outlet>
+      </div>
+      <Footer></Footer>
     </div>
   );
 };
