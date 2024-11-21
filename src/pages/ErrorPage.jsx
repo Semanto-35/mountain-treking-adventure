@@ -10,7 +10,7 @@ const ErrorPage = () => {
       </div>
       <h3 className="text-4xl font-medium">404 - Page Not Found</h3>
       <p className="text-xl">Oops! It looks like the page you're looking for doesn't exist.</p>
-      <Link to="/"><p className="btn btn-primary text-white text-lg mt-6">Go back to Home</p></Link>
+      <Link to="/"><p className="btn bg-[#2a9d8f] text-white text-lg mt-6">Go back to Home</p></Link>
     </div>
   );
 };

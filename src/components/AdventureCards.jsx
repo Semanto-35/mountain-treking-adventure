@@ -52,16 +52,6 @@ const AdventureCards = () => {
       >
         {
           allData.map((adventure) => <SwiperSlide key={adventure.id}>
-            {/* <div className="border space-y-4 p-6 card items-center text-center mb-8 shadow-2xl bg-[#f7f7f7]">
-              <div className="overflow-hidden rounded-full">
-                <img className='rounded-full w-60 h-60 object-cover transform transition-transform duration-300 hover:scale-110' src={adventure.image} alt="" />
-              </div>
-              <h3 className='text-2xl font-semibold text-[#2c6e49]'>{adventure.adventureTitle}</h3>
-              <p>{adventure.shortDescription}</p>
-              <div className="flex justify-center items-center gap-8">
-                <Link to={`/${adventure.id}`} className='btn bg-[#2c6e49] text-lg text-white'>Explore Now</Link>
-              </div>
-            </div> */}
             <div className="card bg-[#f7f7f7] shadow-2xl mb-8">
               <figure className="overflow-hidden">
                 <img className="w-full h-80 object-cover transform transition-transform duration-300 hover:scale-110"
@@ -69,7 +59,7 @@ const AdventureCards = () => {
                   alt="Shoes" />
               </figure>
               <div className="card-body">
-                <h2 className="card-title">{adventure.adventureTitle}</h2>
+                <h2 className="card-title text-[#2a9d8f]">{adventure.adventureTitle}</h2>
                 <p className="font-semibold text-lg">Eco-Friendly Features:</p>
                 {
                   adventure.ecoFriendlyFeatures.map((spa, index) => <li className="list-decimal text-[#09080F]/60" key={index}>{spa}</li>
@@ -77,7 +67,7 @@ const AdventureCards = () => {
                 }
                 <div className="card-actions mt-5">
                   <Link to={`/details/${adventure.id}`} className="btn
-                  bg-[#2c6e49] text-lg text-white">Explore Now</Link>
+                  bg-[#2a9d8f] text-lg text-white">Explore Now</Link>
                 </div>
               </div>
             </div>

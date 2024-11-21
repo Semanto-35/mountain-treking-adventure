@@ -34,7 +34,7 @@ const AdventureDetails = () => {
   };
 
   return (
-    <div className="max-w-5xl mx-4 md:mx-auto p-6 mt-10 border my-12 bg-[#F7F4E1] text-[#333333] flex flex-col md:flex-row gap-10">
+    <div className="max-w-5xl mx-4 md:mx-auto p-6 md:p-12 mt-10 border my-12 bg-[#ced3db] text-[#333333] flex flex-col md:flex-row gap-10 rounded-md">
       <div data-aos="fade-up" className="w-full rounded-lg overflow-hidden">
         <img
           src={image}
@@ -43,9 +43,9 @@ const AdventureDetails = () => {
         />
       </div>
       <div>
-        <h1 className="text-3xl font-bold mb-2" data-aos="fade-right">
+        <h3 className="text-3xl text-[#2a9d8f] font-bold mb-2" data-aos="fade-right">
           {adventureTitle}
-        </h1>
+        </h3>
         <p className="text-lg mb-4" data-aos="fade-left">
           <strong>Category:</strong> {categoryName}
         </p>
@@ -55,26 +55,26 @@ const AdventureDetails = () => {
           </p>
           <div className="flex justify-between items-center">
             <p data-aos="fade-right" className="text-lg flex items-center gap-2">
-              <RiMoneyDollarCircleFill /> {adventureCost}$ only
+              <RiMoneyDollarCircleFill className="text-[#2a9d8f]"/> {adventureCost}$ only
             </p>
             <p data-aos="fade-left" className="text-lg flex items-center gap-2">
-              <FaUserTie /> {maxGroupSize} People
+              <FaUserTie className="text-[#2a9d8f]"/> {maxGroupSize} People
             </p>
           </div>
           <div className="flex justify-between items-center">
             <p data-aos="fade-right" className="text-lg flex items-center gap-2">
-              <FaMapLocationDot /> {location}
+              <FaMapLocationDot className="text-[#2a9d8f]"/> {location}
             </p>
             <p data-aos="fade-left" className="text-lg flex items-center gap-2">
-              <FaRegCalendarDays /> {duration}
+              <FaRegCalendarDays className="text-[#2a9d8f]"/> {duration}
             </p>
           </div>
           <div className="flex justify-between items-center">
             <p data-aos="fade-up" className="text-lg flex items-center gap-2">
-              <SiLevelsdotfyi /> {adventureLevel}
+              <SiLevelsdotfyi className="text-[#2a9d8f]"/> {adventureLevel}
             </p>
             <p data-aos="fade-up" className="text-lg flex items-center gap-2">
-              <MdAirplaneTicket /> {bookingAvailability}
+              <MdAirplaneTicket className="text-[#2a9d8f]" /> {bookingAvailability}
             </p>
           </div>
           <div data-aos="fade-up">
@@ -110,7 +110,7 @@ const AdventureDetails = () => {
         </div>
         <button
           data-aos="fade-up"
-          className="btn mt-6 text-lg text-white bg-[#1f7db4]"
+          className="btn mt-6 text-lg text-white bg-[#2a9d8f]"
           onClick={() => handleTalkWithExpert()}
         >
           Talk with Expert

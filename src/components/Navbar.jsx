@@ -13,7 +13,7 @@ const Navbar = () => {
   </>
 
   return (
-    <div className="navbar bg-[#023047] text-white sticky top-0 z-50 backdrop-blur-xl">
+    <div className="navbar bg-[#2a9d8f] text-white sticky top-0 z-50 backdrop-blur-xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +32,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow">
+            className="menu menu-sm dropdown-content bg-[#2a9d8f] rounded-box z-50 mt-3 w-52 p-2 shadow">
             {links}
           </ul>
         </div>
@@ -51,8 +51,8 @@ const Navbar = () => {
                 alt=""
                 src={user?.photoURL} />
             </div>
-            <button onClick={logOut} className="btn text-lg bg-[#00b0d7] text-white">Log Out</button>
-          </div>) : (<Link to='/login' className="btn text-lg bg-[#00b0d7] text-white">Login</Link>)
+            <button onClick={logOut} className="btn text-lg bg-white text-[#2a9d8f]">Log Out</button>
+          </div>) : (<Link to='/login' className="btn text-lg bg-white text-[#2a9d8f]">Login</Link>)
         }
       </div>
     </div>

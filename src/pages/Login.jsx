@@ -4,13 +4,14 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.config";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const emailRef = useRef(null);
   const provider = new GoogleAuthProvider();
   const auth = getAuth(app);
   const { userLogin, setUser } = useContext(AuthContext);
-  const [error, setError] = useState({});
+  const [error, setError] = useState('');
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -25,9 +26,10 @@ const Login = () => {
         const user = result.user;
         setUser(user);
         navigate(location?.state ? location.state : "/");
+        toast.success("Login in successful");
       })
       .catch((err) => {
-        setError({ ...error, login: err.code });
+        setError(err.message);
       });
   };
   const googleLogin = () => {
@@ -36,9 +38,10 @@ const Login = () => {
         const user = result.user;
         setUser(user);
         navigate(location?.state ? location.state : "/");
+        toast.success("Login in successful");
       })
       .catch((err) => {
-        setError({ ...error, login: err.code });
+        setError(err.message);
       });
   };
 
@@ -54,7 +57,7 @@ const Login = () => {
   }
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center mx-4">
       <div className="card bg-[#f7f7f7] w-full max-w-lg shrink-0 rounded-lg p-10">
         <h2 className="text-2xl font-semibold text-center">
           Login your account
@@ -84,9 +87,9 @@ const Login = () => {
               className="input input-bordered"
               required
             />
-            {error.login && (
-              <label className="label text-sm text-red-600">
-                {error.login}
+            {error && (
+              <label className="label text-red-600">
+                {error}
               </label>
             )}
             <label onClick={handleForgetPassword} className="label">
@@ -96,12 +99,12 @@ const Login = () => {
             </label>
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#f1c40f] rounded-lg text-lg">Login</button>
+            <button className="btn bg-[#2a9d8f] rounded-lg text-lg text-white">Login</button>
           </div>
         </form>
         <p className="text-center font-semibold">
           Dont’t Have An Account ?{" "}
-          <Link className="text-[#1f7db4]" to="/register">
+          <Link className="text-[#2a9d8f]" to="/register">
             Register
           </Link>
         </p>

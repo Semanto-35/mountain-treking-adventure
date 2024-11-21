@@ -25,7 +25,6 @@ const ForgetPassword = () => {
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        // ..
       });
 
   }
@@ -34,7 +33,7 @@ const ForgetPassword = () => {
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-[#f7f7f7] w-full max-w-lg shrink-0 rounded-lg p-10">
         <h2 className="text-2xl font-semibold text-center">
-          Login your account
+          Reset Your password here
         </h2>
         <form onSubmit={handleSubmit} className="card-body">
           <div className="form-control">
@@ -52,7 +51,7 @@ const ForgetPassword = () => {
             />
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#f1c40f] rounded-lg text-lg">Reset Password</button>
+            <button className="btn bg-[#2a9d8f] rounded-lg text-lg text-white">Reset Password</button>
           </div>
         </form>
       </div>

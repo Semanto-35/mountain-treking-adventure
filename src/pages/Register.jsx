@@ -12,15 +12,16 @@ const Register = () => {
   const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const [error, setError] = useState({});
+  const [error, setError] = useState('');
+  console.log(error);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
     const name = form.get("name");
-    console.log(name);
     if (name.length < 6) {
-      setError({ ...error, name: "name should be more then 6 character" });
+      setError("name should be more then 6 character");
+      return;
     }
     const email = form.get("email");
     const photo = form.get("photo");
@@ -47,12 +48,11 @@ const Register = () => {
             navigate("/");
           })
           .catch((err) => {
-            console.log(err);
+            setError(err.message);
           });
       })
       .catch((err) => {
-        console.log(err);
-        // ..
+        setError(err.message);
       });
   };
   const googleLogin = () => {
@@ -63,12 +63,12 @@ const Register = () => {
         navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
-        setError({ ...error, login: err.code });
+        setError(err.message);
       });
   };
 
   return (
-    <div className="min-h-screen flex justify-center items-center">
+    <div className="min-h-screen flex justify-center items-center mx-4">
       <div className="card bg-[#f7f7f7] w-full max-w-lg shrink-0 rounded-lg p-10">
         <h2 className="text-2xl font-semibold text-center">
           Register your account
@@ -86,10 +86,6 @@ const Register = () => {
               required
             />
           </div>
-          {error.name && (
-            <label className="label text-sx text-red-500">{error.name}</label>
-          )}
-
           <div className="form-control">
             <label className="label">
               <span className="label-text">Photo URL</span>
@@ -102,7 +98,6 @@ const Register = () => {
               required
             />
           </div>
-          {/* email input  */}
           <div className="form-control">
             <label className="label">
               <span className="label-text">Email</span>
@@ -115,7 +110,6 @@ const Register = () => {
               required
             />
           </div>
-
           <div className="form-control">
             <label className="label">
               <span className="label-text">Password</span>
@@ -128,15 +122,14 @@ const Register = () => {
               required
             />
           </div>
-          {error.register && <label className="label">{error.register}</label>}
-
+          {error && <label className="label text-red-600">{error}</label>}
           <div className="form-control mt-6">
-            <button className="btn bg-[#f1c40f] rounded-lg text-lg">Register</button>
+            <button className="btn bg-[#2a9d8f] rounded-lg text-white text-lg">Register</button>
           </div>
         </form>
         <p className="text-center font-semibold">
           Allready Have An Account ?{" "}
-          <Link className="text-[#1f7db4]" to="/login">
+          <Link className="text-[#2a9d8f]" to="/login">
             Login
           </Link>
         </p>

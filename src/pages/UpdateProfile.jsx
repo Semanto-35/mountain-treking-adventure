@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 
 const UpdateProfile = () => {
@@ -14,15 +15,16 @@ const UpdateProfile = () => {
     console.log(name, photoURL);
     updateUserProfile({ displayName: name, photoURL: photoURL })
       .then(() => {
-        navigate("/");
+        toast.success("Profile updated Successfully!")
+        navigate("/profile");
       })
       .catch((err) => {
         console.log(err);
       });
   }
   return (
-    <div className="min-h-screen max-w-3xl mx-auto border my-12 p-8 bg-[#DDE2E4] rounded-lg">
-      <h3 className="text-3xl px-8 font-medium">Update Your Information</h3>
+    <div className="min-h-screen max-w-3xl mx-4 md:mx-auto my-12 p-8 bg-[#DDE2E4] rounded-lg">
+      <h3 className="text-2xl md:text-3xl px-8 font-medium">Update Your Information</h3>
       <form onSubmit={handleSubmit} className="card-body">
         <div className="form-control">
           <label className="label">
@@ -49,7 +51,7 @@ const UpdateProfile = () => {
           />
         </div>
         <div>
-          <button className="btn mt-6 btn-warning text-lg">Update Info</button>
+          <button className="btn mt-6 bg-[#2a9d8f] text-white text-lg">Update Info</button>
         </div>
       </form>
     </div>

@@ -103,7 +103,7 @@ const Testimonials = () => {
             </SwiperSlide>))}
           </Swiper>
           <div className='md:w-1/2 w-full h-full '>
-            <img className='w-full h-full' src="https://i.ibb.co/k6g6fCQ/Testimonial.jpg" alt="" />
+            <img className='w-full h-full rounded-md' src="https://i.ibb.co/k6g6fCQ/Testimonial.jpg" alt="" />
           </div>
         </div>
       </div>
