@@ -1,0 +1,263 @@
+[
+  {
+    "id": "1",
+    "adventureTitle": "Everest Base Camp Trek",
+    "image": "https://i.ibb.co/zJCbKxs/mountain-1.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "A challenging trek to the base of the world's highest peak, offering breathtaking views of the Himalayas.",
+    "adventureCost": 1800,
+    "bookingAvailability": "Available",
+    "location": "Nepal",
+    "duration": "14 Days",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Guided trek with certified guides",
+      "Accommodations in teahouses",
+      "All meals during the trek",
+      "Porter services"
+    ],
+    "ecoFriendlyFeatures": [
+      "Support for local communities",
+      "Eco-friendly accommodations",
+      "Minimal plastic use policies"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Prepare for high-altitude conditions",
+      "Pack warm clothing",
+      "Travel insurance is mandatory"
+    ]
+  },
+  {
+    "id": "2",
+    "adventureTitle": "Inca Trail to Machu Picchu",
+    "image": "https://i.ibb.co/RHjgdgN/mountain-2.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "Explore ancient ruins and trek through the Andes to reach the iconic Machu Picchu.",
+    "adventureCost": 1500,
+    "bookingAvailability": "Available",
+    "location": "Peru",
+    "duration": "5 Days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Tents and camping gear",
+      "Professional guide services",
+      "Permits to enter the Inca Trail",
+      "All meals and snacks"
+    ],
+    "ecoFriendlyFeatures": [
+      "No single-use plastics",
+      "Cultural preservation initiatives",
+      "Sustainable trekking practices"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Permit bookings must be made months in advance",
+      "Bring layers for fluctuating temperatures",
+      "Hydration is crucial"
+    ]
+  },
+  {
+    "id": "3",
+    "adventureTitle": "Kilimanjaro Summit Trek",
+    "image": "https://i.ibb.co/S6BC3ZH/mountain-3.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "Climb Africa's highest peak through stunning landscapes from rainforest to arctic desert.",
+    "adventureCost": 2000,
+    "bookingAvailability": "Limited",
+    "location": "Tanzania",
+    "duration": "7 Days",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Licensed mountain guides",
+      "All park fees",
+      "Meals and water",
+      "Camping gear"
+    ],
+    "ecoFriendlyFeatures": [
+      "Leave-no-trace policies",
+      "Waste management systems",
+      "Support for local communities"
+    ],
+    "maxGroupSize": 15,
+    "specialInstructions": [
+      "Obtain a Tanzania visa beforehand",
+      "Carry energy snacks",
+      "Prepare for extreme cold at the summit"
+    ]
+  },
+  {
+    "id": "4",
+    "adventureTitle": "The Annapurna Circuit",
+    "image": "https://i.ibb.co/R3pBgZb/mountain-4.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "A scenic trek through diverse landscapes and cultures in the Annapurna region.",
+    "adventureCost": 1200,
+    "bookingAvailability": "Available",
+    "location": "Nepal",
+    "duration": "12 Days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Lodging in local teahouses",
+      "All meals during the trek",
+      "Permits for conservation areas",
+      "Experienced trekking guide"
+    ],
+    "ecoFriendlyFeatures": [
+      "Use of reusable water bottles",
+      "Community-based tourism",
+      "Minimal-impact trekking practices"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Ensure physical fitness for long-distance trekking",
+      "Pack light but warm",
+      "Respect local customs and traditions"
+    ]
+  },
+  {
+    "id": "5",
+    "adventureTitle": "Dolomites High Route",
+    "image": "https://i.ibb.co/VC4bzSf/mountain-5.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "Trek across the majestic Dolomites, enjoying panoramic alpine views and charming huts.",
+    "adventureCost": 1400,
+    "bookingAvailability": "Available",
+    "location": "Italy",
+    "duration": "7 Days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Mountain hut accommodations",
+      "Breakfast and dinner",
+      "Detailed route maps",
+      "Emergency support"
+    ],
+    "ecoFriendlyFeatures": [
+      "Preservation of natural trails",
+      "Eco-certified accommodations",
+      "Encouragement of public transport"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Pack suitable hiking boots",
+      "Prepare for weather changes",
+      "Bring a lightweight daypack"
+    ]
+  },
+  {
+    "id": "6",
+    "adventureTitle": "Torres del Paine Trek",
+    "image": "https://i.ibb.co/xsfHCz1/mountain-6.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "Discover the raw beauty of Patagonia with this iconic trek through glaciers, mountains, and valleys.",
+    "adventureCost": 1600,
+    "bookingAvailability": "Available",
+    "location": "Chile",
+    "duration": "8 Days",
+    "adventureLevel": "Advanced",
+    "includedItems": [
+      "Local guide services",
+      "Park entrance fees",
+      "Tent and camping equipment",
+      "All meals during the trek"
+    ],
+    "ecoFriendlyFeatures": [
+      "Waste management protocols",
+      "Support for local conservation",
+      "No single-use plastics"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Pack windproof gear",
+      "Stay hydrated",
+      "Follow park regulations strictly"
+    ]
+  },
+  {
+    "id": "7",
+    "adventureTitle": "Rocky Mountain Trail",
+    "image": "https://i.ibb.co/hsXR2W6/mountain-7.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "An adventurous trek through rugged trails and scenic alpine lakes in the Rockies.",
+    "adventureCost": 1000,
+    "bookingAvailability": "Available",
+    "location": "USA",
+    "duration": "5 Days",
+    "adventureLevel": "Intermediate",
+    "includedItems": [
+      "Professional guides",
+      "Trail permits",
+      "Camping gear",
+      "Meals and snacks"
+    ],
+    "ecoFriendlyFeatures": [
+      "Wildlife-friendly policies",
+      "Zero-waste guidelines",
+      "Eco-certified accommodations"
+    ],
+    "maxGroupSize": 12,
+    "specialInstructions": [
+      "Be prepared for high altitudes",
+      "Bring sturdy hiking boots",
+      "Follow all Leave No Trace principles"
+    ]
+  },
+  {
+    "id": "8",
+    "adventureTitle": "Laugavegur Trek",
+    "image": "https://i.ibb.co/s1jW7d2/mountain-8.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "A magical trek through Iceland’s volcanic landscapes, colorful mountains, and glaciers.",
+    "adventureCost": 1300,
+    "bookingAvailability": "Limited",
+    "location": "Iceland",
+    "duration": "4 Days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Hut accommodations",
+      "Transport to trailhead",
+      "Professional guide",
+      "Meals during the trek"
+    ],
+    "ecoFriendlyFeatures": [
+      "Sustainable waste practices",
+      "Support for local communities",
+      "Eco-friendly gear recommendations"
+    ],
+    "maxGroupSize": 10,
+    "specialInstructions": [
+      "Prepare for wet and cold conditions",
+      "Use waterproof backpacks",
+      "Pack lightweight gear"
+    ]
+  },
+  {
+    "id": "9",
+    "adventureTitle": "Mount Fuji Ascent",
+    "image": "https://i.ibb.co/hmsdjNw/mountain-9.jpg",
+    "categoryName": "Mountain Trek",
+    "shortDescription": "Experience the iconic climb up Japan's highest peak with mesmerizing sunrise views.",
+    "adventureCost": 900,
+    "bookingAvailability": "Available",
+    "location": "Japan",
+    "duration": "2 Days",
+    "adventureLevel": "Moderate",
+    "includedItems": [
+      "Local guide services",
+      "Mountain hut stay",
+      "Trail permits",
+      "Basic meals"
+    ],
+    "ecoFriendlyFeatures": [
+      "Strict trash management",
+      "Cultural preservation",
+      "Support for local tourism"
+    ],
+    "maxGroupSize": 8,
+    "specialInstructions": [
+      "Plan for a nighttime start",
+      "Pack warm layers",
+      "Be prepared for crowded trails"
+    ]
+  }
+]
