@@ -7,6 +7,7 @@ import Register from "../pages/Register";
 import UpdateProfile from "../pages/UpdateProfile";
 import MyProfile from "../pages/MyProfile";
 import AdventureCards from "../components/AdventureCards";
+import AdventureDetails from "../pages/AdventureDetails";
 
 
 const router = createBrowserRouter([
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
             loader: ()=>fetch('/adventure.json')
           }
         ]
+      },
+      {
+        path: '/details/:detailsId',
+        element: <AdventureDetails></AdventureDetails>,
+        loader: ()=>fetch('/adventure.json')
       },
       {
         path: '/profile',

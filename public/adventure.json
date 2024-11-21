@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "adventureTitle": "Everest Base Camp Trek",
     "image": "https://i.ibb.co/zJCbKxs/mountain-1.jpg",
     "categoryName": "Mountain Trek",
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": 2,
     "adventureTitle": "Inca Trail to Machu Picchu",
     "image": "https://i.ibb.co/RHjgdgN/mountain-2.jpg",
     "categoryName": "Mountain Trek",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": 3,
     "adventureTitle": "Kilimanjaro Summit Trek",
     "image": "https://i.ibb.co/S6BC3ZH/mountain-3.jpg",
     "categoryName": "Mountain Trek",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": 4,
     "adventureTitle": "The Annapurna Circuit",
     "image": "https://i.ibb.co/R3pBgZb/mountain-4.jpg",
     "categoryName": "Mountain Trek",
@@ -116,7 +116,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": 5,
     "adventureTitle": "Dolomites High Route",
     "image": "https://i.ibb.co/VC4bzSf/mountain-5.jpg",
     "categoryName": "Mountain Trek",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "id": "6",
+    "id": 6,
     "adventureTitle": "Torres del Paine Trek",
     "image": "https://i.ibb.co/xsfHCz1/mountain-6.jpg",
     "categoryName": "Mountain Trek",
@@ -174,7 +174,7 @@
     ]
   },
   {
-    "id": "7",
+    "id": 7,
     "adventureTitle": "Rocky Mountain Trail",
     "image": "https://i.ibb.co/hsXR2W6/mountain-7.jpg",
     "categoryName": "Mountain Trek",
@@ -203,7 +203,7 @@
     ]
   },
   {
-    "id": "8",
+    "id": 8,
     "adventureTitle": "Laugavegur Trek",
     "image": "https://i.ibb.co/s1jW7d2/mountain-8.jpg",
     "categoryName": "Mountain Trek",
@@ -232,7 +232,7 @@
     ]
   },
   {
-    "id": "9",
+    "id": 9,
     "adventureTitle": "Mount Fuji Ascent",
     "image": "https://i.ibb.co/hmsdjNw/mountain-9.jpg",
     "categoryName": "Mountain Trek",

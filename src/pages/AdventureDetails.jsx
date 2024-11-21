@@ -1,0 +1,129 @@
+import { useEffect } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { FaUserTie } from "react-icons/fa";
+import { FaMapLocationDot, FaRegCalendarDays } from "react-icons/fa6";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
+import { SiLevelsdotfyi } from "react-icons/si";
+import { MdAirplaneTicket } from "react-icons/md";
+
+
+const AdventureDetails = () => {
+  const { detailsId } = useParams();
+  const allData = useLoaderData();
+  const adventure = allData.find(item => item.id === parseInt(detailsId));
+  console.log(detailsId, allData, adventure);
+
+  const { image, adventureTitle, shortDescription, adventureCost, bookingAvailability, location, duration, includedItems, specialInstructions, maxGroupSize, ecoFriendlyFeatures, categoryName, adventureLevel } = adventure;
+
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
+  const currentTime = new Date().getHours();
+  const handleTalkWithExpert = () => {
+    if (currentTime >= 10 && currentTime <= 20) {
+      window.open('https://meet.google.com', '_blank');
+    } else {
+      alert('Consultation is available from 10:00 AM to 8:00 PM.');
+    }
+  };
+
+  return (
+    <div className="max-w-5xl mx-4 md:mx-auto p-6 mt-10 border my-12 bg-[#F7F4E1] text-[#333333] flex flex-col md:flex-row gap-10">
+      <div data-aos="fade-up" className="w-full rounded-lg overflow-hidden">
+        <img
+          src={image}
+          alt={adventureTitle}
+          className="rounded-lg shadow-lg w-full h-80 md:h-full object-cover transform transition-transform duration-300 hover:scale-110"
+        />
+      </div>
+      <div>
+        {/* Adventure Title and Category */}
+        <h1 className="text-3xl font-bold mb-2" data-aos="fade-right">
+          {adventureTitle}
+        </h1>
+        <p className="text-lg mb-4" data-aos="fade-left">
+          <strong>Category:</strong> {categoryName}
+        </p>
+
+        {/* Details Section */}
+        <div className="space-y-4">
+          <p data-aos="fade-up" className="text-lg">
+            <strong>Description:</strong> {shortDescription}
+          </p>
+          <div className="flex justify-between items-center">
+            <p data-aos="fade-right" className="text-lg flex items-center gap-2">
+              <RiMoneyDollarCircleFill /> {adventureCost}$ only
+            </p>
+            <p data-aos="fade-left" className="text-lg flex items-center gap-2">
+              <FaUserTie /> {maxGroupSize} People
+            </p>
+          </div>
+          <div className="flex justify-between items-center">
+            <p data-aos="fade-right" className="text-lg flex items-center gap-2">
+              <FaMapLocationDot /> {location}
+            </p>
+            <p data-aos="fade-left" className="text-lg flex items-center gap-2">
+              <FaRegCalendarDays /> {duration}
+            </p>
+          </div>
+          <div className="flex justify-between items-center">
+            <p data-aos="fade-up" className="text-lg flex items-center gap-2">
+              <SiLevelsdotfyi /> {adventureLevel}
+            </p>
+            <p data-aos="fade-up" className="text-lg flex items-center gap-2">
+              <MdAirplaneTicket /> {bookingAvailability}
+            </p>
+          </div>
+
+          {/* Included Items */}
+          <div data-aos="fade-up">
+            <h3 className="text-xl font-semibold mt-4">Included Items</h3>
+            <ul className="list-disc list-inside">
+              {includedItems.map((item, index) => (
+                <li key={index} className="text-gray-700">
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Eco-Friendly Features */}
+          <div data-aos="fade-up">
+            <h3 className="text-xl font-semibold mt-4">Eco-Friendly Features</h3>
+            <ul className="list-disc list-inside">
+              {ecoFriendlyFeatures.map((feature, index) => (
+                <li key={index} className="text-gray-700">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Special Instructions */}
+          <div data-aos="fade-up">
+            <h3 className="text-xl font-semibold mt-4">Special Instructions</h3>
+            <ul className="list-disc list-inside">
+              {specialInstructions.map((instruction, index) => (
+                <li key={index} className="text-gray-700">
+                  {instruction}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <button
+          data-aos="fade-up"
+          className="btn mt-6 text-lg text-white bg-[#1f7db4]"
+          onClick={() => handleTalkWithExpert()}
+        >
+          Talk with Expert
+        </button>
+      </div>
+    </div>
+  );
+};
+
+export default AdventureDetails;

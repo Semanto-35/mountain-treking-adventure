@@ -76,7 +76,7 @@ const AdventureCards = () => {
                   )
                 }
                 <div className="card-actions mt-5">
-                  <Link to={''} className="btn
+                  <Link to={`/details/${adventure.id}`} className="btn
                   bg-[#2c6e49] text-lg text-white">Explore Now</Link>
                 </div>
               </div>
