@@ -5,7 +5,7 @@ import { createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWith
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
-const AuthProvider = ({children}) => {
+const AuthProvider = ({ children }) => {
 
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,7 @@ const AuthProvider = ({children}) => {
   const updateUserProfile = (updatedData) => {
     return updateProfile(auth.currentUser, updatedData);
   };
-  
+
   const authInfo = {
     user,
     setUser,
