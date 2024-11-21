@@ -13,7 +13,7 @@ const Register = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [error, setError] = useState('');
-  console.log(error);
+
 
   const handleSubmit = (e) => {
     e.preventDefault();

@@ -12,14 +12,14 @@ const UpdateProfile = () => {
     e.preventDefault();
     const name = e.target.name.value;
     const photoURL = e.target.photo.value;
-    console.log(name, photoURL);
+
     updateUserProfile({ displayName: name, photoURL: photoURL })
       .then(() => {
         toast.success("Profile updated Successfully!")
         navigate("/profile");
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
       });
   }
   return (
