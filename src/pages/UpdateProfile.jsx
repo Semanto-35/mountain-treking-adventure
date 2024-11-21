@@ -21,7 +21,7 @@ const UpdateProfile = () => {
       });
   }
   return (
-    <div className="min-h-screen max-w-3xl mx-auto border my-12 p-8 bg-[#f7f7f7]">
+    <div className="min-h-screen max-w-3xl mx-auto border my-12 p-8 bg-[#DDE2E4] rounded-lg">
       <h3 className="text-3xl px-8 font-medium">Update Your Information</h3>
       <form onSubmit={handleSubmit} className="card-body">
         <div className="form-control">
