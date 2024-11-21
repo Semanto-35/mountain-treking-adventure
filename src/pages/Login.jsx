@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import app from "../firebase/firebase.config";
-
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
   const provider = new GoogleAuthProvider();
@@ -92,8 +92,9 @@ const Login = () => {
             Register
           </Link>
         </p>
-        <hr />
-        <button onClick={googleLogin} className="btn mt-8 btn-warning">google</button>
+        <button onClick={googleLogin} className="btn mt-8  text-lg btn-outline w-9/12 mx-auto">
+          <FcGoogle></FcGoogle>
+          Login with Google</button>
       </div>
     </div>
   );

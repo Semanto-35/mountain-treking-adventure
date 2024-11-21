@@ -4,6 +4,8 @@ import ErrorPage from "../pages/ErrorPage";
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import UpdateProfile from "../pages/UpdateProfile";
+import MyProfile from "../pages/MyProfile";
 
 
 const router = createBrowserRouter([
@@ -13,8 +15,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home></Home>
-      }
+        element: <Home></Home>,
+        children: [
+
+        ]
+      },
+      {
+        path: '/profile',
+        element: <MyProfile></MyProfile>
+      },
+      {
+        path: '/updateProfile',
+        element: <UpdateProfile></UpdateProfile>
+      },
     ]
   },
   {
