@@ -8,6 +8,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import MyProfile from "../pages/MyProfile";
 import AdventureCards from "../components/AdventureCards";
 import AdventureDetails from "../pages/AdventureDetails";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 const router = createBrowserRouter([
@@ -22,22 +23,28 @@ const router = createBrowserRouter([
           {
             path: '/',
             element: <AdventureCards></AdventureCards>,
-            loader: ()=>fetch('/adventure.json')
+            loader: () => fetch('/adventure.json')
           }
         ]
       },
       {
         path: '/details/:detailsId',
-        element: <AdventureDetails></AdventureDetails>,
-        loader: ()=>fetch('/adventure.json')
+        element: <PrivateRoutes>
+          <AdventureDetails></AdventureDetails>
+        </PrivateRoutes>,
+        loader: () => fetch('/adventure.json')
       },
       {
         path: '/profile',
-        element: <MyProfile></MyProfile>
+        element: <PrivateRoutes>
+          <MyProfile></MyProfile>
+        </PrivateRoutes>
       },
       {
         path: '/updateProfile',
-        element: <UpdateProfile></UpdateProfile>
+        element: <PrivateRoutes>
+          <UpdateProfile></UpdateProfile>
+        </PrivateRoutes>
       },
     ]
   },

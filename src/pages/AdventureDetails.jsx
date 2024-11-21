@@ -7,13 +7,12 @@ import { FaMapLocationDot, FaRegCalendarDays } from "react-icons/fa6";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { SiLevelsdotfyi } from "react-icons/si";
 import { MdAirplaneTicket } from "react-icons/md";
-
+import Swal from 'sweetalert2'
 
 const AdventureDetails = () => {
   const { detailsId } = useParams();
   const allData = useLoaderData();
   const adventure = allData.find(item => item.id === parseInt(detailsId));
-  console.log(detailsId, allData, adventure);
 
   const { image, adventureTitle, shortDescription, adventureCost, bookingAvailability, location, duration, includedItems, specialInstructions, maxGroupSize, ecoFriendlyFeatures, categoryName, adventureLevel } = adventure;
 
@@ -23,10 +22,14 @@ const AdventureDetails = () => {
 
   const currentTime = new Date().getHours();
   const handleTalkWithExpert = () => {
-    if (currentTime >= 10 && currentTime <= 20) {
+    if (currentTime >= 10 && currentTime <= 13) {
       window.open('https://meet.google.com', '_blank');
     } else {
-      alert('Consultation is available from 10:00 AM to 8:00 PM.');
+      Swal.fire({
+        title: "Consultation Time",
+        text: "Talk to our expert between 10:00 am to 8:00 pm",
+        icon: "info"
+      });
     }
   };
 
@@ -40,15 +43,12 @@ const AdventureDetails = () => {
         />
       </div>
       <div>
-        {/* Adventure Title and Category */}
         <h1 className="text-3xl font-bold mb-2" data-aos="fade-right">
           {adventureTitle}
         </h1>
         <p className="text-lg mb-4" data-aos="fade-left">
           <strong>Category:</strong> {categoryName}
         </p>
-
-        {/* Details Section */}
         <div className="space-y-4">
           <p data-aos="fade-up" className="text-lg">
             <strong>Description:</strong> {shortDescription}
