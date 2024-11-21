@@ -22,7 +22,7 @@ const AdventureDetails = () => {
 
   const currentTime = new Date().getHours();
   const handleTalkWithExpert = () => {
-    if (currentTime >= 10 && currentTime <= 13) {
+    if (currentTime >= 10 && currentTime <= 20) {
       window.open('https://meet.google.com', '_blank');
     } else {
       Swal.fire({
@@ -77,8 +77,6 @@ const AdventureDetails = () => {
               <MdAirplaneTicket /> {bookingAvailability}
             </p>
           </div>
-
-          {/* Included Items */}
           <div data-aos="fade-up">
             <h3 className="text-xl font-semibold mt-4">Included Items</h3>
             <ul className="list-disc list-inside">
@@ -89,8 +87,6 @@ const AdventureDetails = () => {
               ))}
             </ul>
           </div>
-
-          {/* Eco-Friendly Features */}
           <div data-aos="fade-up">
             <h3 className="text-xl font-semibold mt-4">Eco-Friendly Features</h3>
             <ul className="list-disc list-inside">
@@ -101,8 +97,6 @@ const AdventureDetails = () => {
               ))}
             </ul>
           </div>
-
-          {/* Special Instructions */}
           <div data-aos="fade-up">
             <h3 className="text-xl font-semibold mt-4">Special Instructions</h3>
             <ul className="list-disc list-inside">

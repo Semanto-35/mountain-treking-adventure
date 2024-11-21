@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 import { AuthContext } from "../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
@@ -6,6 +6,7 @@ import app from "../firebase/firebase.config";
 import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
+  const emailRef = useRef(null);
   const provider = new GoogleAuthProvider();
   const auth = getAuth(app);
   const { userLogin, setUser } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const Login = () => {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    // console.log({ email, password });
+
     userLogin(email, password)
       .then((result) => {
         const user = result.user;
@@ -41,6 +42,17 @@ const Login = () => {
       });
   };
 
+  const handleForgetPassword = () => {
+    const email = emailRef.current?.value;
+    if (!email) {
+      console.log('Please provide a valid email');
+      setError('Please provide a valid email address')
+    }
+    else {
+      navigate("/forgetpassword", { state: { email } });
+    }
+  }
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-[#f7f7f7] w-full max-w-lg shrink-0 rounded-lg p-10">
@@ -55,6 +67,7 @@ const Login = () => {
             <input
               name="email"
               type="email"
+              ref={emailRef}
               placeholder="email"
               className="input input-bordered"
               required
@@ -76,8 +89,8 @@ const Login = () => {
                 {error.login}
               </label>
             )}
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
+            <label onClick={handleForgetPassword} className="label">
+              <a className="label-text-alt link link-hover">
                 Forgot password?
               </a>
             </label>

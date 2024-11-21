@@ -1,23 +1,42 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../provider/AuthProvider";
+import { FcGoogle } from "react-icons/fc";
+import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import app from "../firebase/firebase.config";
 
 
 const Register = () => {
+  const provider = new GoogleAuthProvider();
+  const auth = getAuth(app);
   const { createNewUser, setUser, updateUserProfile } = useContext(AuthContext);
   const navigate = useNavigate();
+  const location = useLocation();
   const [error, setError] = useState({});
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    //get form data
     const form = new FormData(e.target);
     const name = form.get("name");
+    console.log(name);
     if (name.length < 6) {
       setError({ ...error, name: "name should be more then 6 character" });
     }
     const email = form.get("email");
     const photo = form.get("photo");
     const password = form.get("password");
+
+    if (password.length < 6) {
+      setError('Password should be 6 characters or longer');
+      return;
+    }
+
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
+
+    if (!passwordRegex.test(password)) {
+      setError('At least one uppercase, one lowercase, one number, one special character');
+      return;
+    }
 
     createNewUser(email, password)
       .then((result) => {
@@ -36,6 +55,18 @@ const Register = () => {
         // ..
       });
   };
+  const googleLogin = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((err) => {
+        setError({ ...error, login: err.code });
+      });
+  };
+
   return (
     <div className="min-h-screen flex justify-center items-center">
       <div className="card bg-[#f7f7f7] w-full max-w-lg shrink-0 rounded-lg p-10">
@@ -109,6 +140,10 @@ const Register = () => {
             Login
           </Link>
         </p>
+        <button onClick={googleLogin} className="btn mt-8 btn-sm text-lg btn-outline w-9/12 mx-auto">
+          <FcGoogle></FcGoogle>
+          Login with Google
+        </button>
       </div>
     </div>
   );

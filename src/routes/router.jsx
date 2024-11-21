@@ -9,6 +9,7 @@ import MyProfile from "../pages/MyProfile";
 import AdventureCards from "../components/AdventureCards";
 import AdventureDetails from "../pages/AdventureDetails";
 import PrivateRoutes from "./PrivateRoutes";
+import ForgetPassword from "../pages/ForgetPassword";
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: '/register',
     element: <Register></Register>
+  },
+  {
+    path: '/forgetPassword',
+    element: <ForgetPassword></ForgetPassword>
   },
   {
     path: '*',
