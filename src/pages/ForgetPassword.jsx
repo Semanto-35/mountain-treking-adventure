@@ -1,6 +1,6 @@
 import { getAuth, sendPasswordResetEmail } from "firebase/auth";
 import { useRef } from "react";
-import { Navigate, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import app from "../firebase/firebase.config";
 import { toast } from "react-toastify";
 
@@ -10,7 +10,7 @@ const ForgetPassword = () => {
   const emailRef = useRef();
   const location = useLocation();
   const getedEmail = location.state?.email || "";
-
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
     const email = emailRef.current.value;
@@ -20,7 +20,7 @@ const ForgetPassword = () => {
     sendPasswordResetEmail(auth, email)
       .then(() => {
         toast.info("Forget password email sent")
-        Navigate('/login');
+        navigate('/login');
       })
       .catch((error) => {
         const errorCode = error.code;
