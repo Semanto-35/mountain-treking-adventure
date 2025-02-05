@@ -1,7 +1,7 @@
 
 # 🌲 **Eco-Adventure Mountain Trek**  
 
-![Project Screenshot](https://your-image-url.com)  
+![Project Screenshot]()  
 
 ## 🏕️ **Project Overview**  
 **Eco-Adventure Mountain Trek** is a **dynamic trekking blog and booking platform** that promotes **eco-friendly travel** experiences. The website showcases adventure trips such as **mountain treks, ocean dives, wildlife safaris**, and more. Users can explore available **adventure experiences, book trips**, and manage their profiles for a **seamless and engaging** experience.  
@@ -70,7 +70,7 @@
 
 ### **1️⃣ Clone the Repository**  
 ```bash
-git clone https://github.com/yourgithub/eco-adventure-mountain-trek.git
+git clone https://github.com/Semanto-35/mountain-treking-adventure.git
 cd eco-adventure-mountain-trek
 ```
 
@@ -100,7 +100,7 @@ Visit `http://localhost:5173` to view the project. 🚀
 
 ## 🔗 **Live Project & Resources**  
 🔗 **Live Demo:** [Visit Here](https://tacit-nut.surge.sh/)  
-📂 **GitHub Repository:** [Eco-Adventure GitHub](https://github.com/yourgithub/eco-adventure-mountain-trek)  
+📂 **GitHub Repository:** [Eco-Adventure GitHub](https://github.com/Semanto-35/mountain-treking-adventure)  
 
 ---
 
