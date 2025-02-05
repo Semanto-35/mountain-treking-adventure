@@ -1,7 +1,7 @@
 
 # 🌲 **Eco-Adventure Mountain Trek**  
 
-![Project Screenshot]()  
+![Project Screenshot](https://i.ibb.co/Cp5Rc4nY/IMG-20250205-195129.jpg)  
 
 ## 🏕️ **Project Overview**  
 **Eco-Adventure Mountain Trek** is a **dynamic trekking blog and booking platform** that promotes **eco-friendly travel** experiences. The website showcases adventure trips such as **mountain treks, ocean dives, wildlife safaris**, and more. Users can explore available **adventure experiences, book trips**, and manage their profiles for a **seamless and engaging** experience.  
